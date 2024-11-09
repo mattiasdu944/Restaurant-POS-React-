@@ -1,8 +1,15 @@
-import React from 'react'
+import { Suspense } from "react"
+import { RouterProvider } from "react-router-dom"
+
+import { router } from "./config/router"
+import { LoadingView } from "./modules/ui"
+
 
 const App = () => {
     return (
-        <div>App</div>
+        <Suspense fallback={<LoadingView/>}>
+            <RouterProvider router={router}/>
+        </Suspense>
     )
 }
 
