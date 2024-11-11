@@ -8,6 +8,28 @@
   body {
     font-family: "Outfit", sans-serif;
   }
+  
+  section {
+    @apply pt-8
+  }
+
+  h1, h2 {
+    @apply font-bold
+  }
+
+  h3, h4 {
+    @apply font-semibold
+  }
+
+  p {
+    @apply text-gray-600 font-light
+  }
+}
+
+@layer components {
+  .container {
+    @apply max-w-[90%] mx-auto
+  }
 }
 
 
@@ -25,7 +47,7 @@
   }
 
   .sidemenu {
-    @apply absolute -left-[100%] md:left-0 md:relative z-50 flex flex-col h-screen bg-white max-w-[300px] w-full border border-slate-200 py-4 px-6 transition-all
+    @apply absolute -left-[100%] md:left-0 md:relative z-50 flex flex-col h-screen bg-white max-w-[125px] w-full border border-slate-200 py-4 px-6 transition-all
   }
 
   .sidemenu--background {
@@ -36,24 +58,28 @@
     @apply left-[0%]
   }
 
+  .sidemenu--items {
+    @apply flex flex-col items-center gap-2
+  }
+
   .sidemenu__link {
-    @apply flex items-center gap-2 p-3 text-base md:px-3 md:py-4 rounded-lg text-slate-500 hover:sidemenu__link--active transition-all
+    @apply flex flex-col items-center p-3 font-medium min-w-full text-sm rounded-[1rem] text-slate-500 hover:sidemenu__link--active transition-all
   }
 
   .sidemenu__link--active {
-    @apply bg-gradient-to-l from-primary-400 to-primary-500 text-white
+    @apply bg-primary-500/25 text-primary-600
   }
 
-  .sidemenu--header {
+  /* .sidemenu--header {
     @apply mb-8 flex items-center gap-2
   }
 
   .sidemenu--header h3 {
     @apply font-semibold text-2xl
-  }
+  } */
 
   .sidemenu--logo {
-    @apply bg-gradient-to-t from-primary-500 to-primary-600 text-2xl p-2 rounded-xl text-white
+    @apply bg-gradient-to-t from-primary-400 to-primary-500 text-2xl p-2 rounded-xl text-white mx-auto mb-8
   }
 
 

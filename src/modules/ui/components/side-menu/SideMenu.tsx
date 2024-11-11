@@ -12,23 +12,20 @@ export const SideMenu = () => {
         <>
             {
                 isSideMeunuOpen && (
-                    <div 
+                    <div
                         className='sidemenu--background'
                     />
                 )
             }
 
             <aside className={isSideMeunuOpen ? 'sidemenu sidemenu-active' : 'sidemenu'}>
-                <div className='sidemenu--header'>
-                    <div className='sidemenu--logo'>
-                        <Store01Icon />
-                    </div>
-                    <h3>React POS</h3>
+                <div className='sidemenu--logo'>
+                    <Store01Icon size={28}/>
                 </div>
-                <ul className='flex flex-col gap-2'>
+                <ul className='sidemenu--items'>
                     {
                         sideMenuOptions.map((option, index) => (
-                            <li key={index}>
+                            <li key={index} className='w-full'>
                                 <SideMenuItem
                                     icon={option.icon}
                                     path={option.path}

@@ -3,17 +3,7 @@ import { RouteObject } from "react-router-dom";
 import { RootLayout } from "../modules/ui/layouts/RootLayout";
 import { NotFoundView } from "../modules/ui";
 
-const MenuPage = lazy(() => import("../modules/menu/pages/MenuPage"));
-
-// export const routes = [
-//     {
-//         Component: loginPage,
-//         name:"login",
-//         path: "/auth/login",
-//         to: ""
-//     }
-// ]
-
+const ProductsPage = lazy(() => import("../modules/products/pages/MenuPage"));
 
 export const rootRoutes: RouteObject =  {
     path: "/admin",
@@ -22,7 +12,7 @@ export const rootRoutes: RouteObject =  {
     children: [
         {
             path: 'menu',
-            Component: MenuPage,
+            Component: ProductsPage,
         }
     ]
 }
