@@ -4,6 +4,7 @@ import { RootLayout } from "../modules/ui/layouts/RootLayout";
 import { NotFoundView } from "../modules/ui";
 
 const ProductsPage = lazy(() => import("../modules/products/pages/MenuPage"));
+const OrdersPage = lazy(() => import("../modules/orders/pages/OrdersPage"));
 
 export const rootRoutes: RouteObject =  {
     path: "/admin",
@@ -13,6 +14,10 @@ export const rootRoutes: RouteObject =  {
         {
             path: 'menu',
             Component: ProductsPage,
+        },
+        {
+            path: 'orders',
+            Component: OrdersPage
         }
     ]
 }

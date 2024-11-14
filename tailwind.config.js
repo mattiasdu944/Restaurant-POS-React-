@@ -8,19 +8,22 @@ export default {
     "./node_modules/@nextui-org/theme/dist/**/*.{js,ts,jsx,tsx}"
   ],
   theme: {
-    extend: {},
+    extend: {
+      boxShadow: {
+        
+        sm: '0px 3px 20px rgba(0, 0, 0, 0.02)',
+        small: '0px 3px 20px rgba(0, 0, 0, 0.02)',
+        md: '0 15px 20px rgba(0, 0, 0, 0.05)',
+        medium: '0 15px 20px rgba(0, 0, 0, 0.05)',
+        'xl': '0 10px 20px -15px rgba(107, 125, 233, 0.9)',
+      },
+    },
   },
   darkMode: "class",
   plugins: [nextui({
     layout: {
-
-      radius: {
-        small: '5px',
-        medium: '10px',
-        large: '15px',
-      }
-
     },
+
 
     themes: {
       light: {
